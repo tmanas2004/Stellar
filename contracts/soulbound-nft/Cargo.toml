@@ -1,0 +1,21 @@
+[package]
+name = "soulbound-nft"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = "20.0.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+soroban-sdk = { version = "20.0.0", features = ["testutils"] }
+
+[features]
+testutils = ["soroban-sdk/testutils"]
+
+[[bin]]
+name = "soulbound-nft"
+path = "src/main.rs"
